@@ -1,0 +1,31 @@
+@import 'varibales.scss';
+@import '../css/fonts.css';
+
+%style-header {
+	font-family: $font-roboto;
+	color: $text-color-grey;
+	font-weight: bold;
+}
+%btn-blue {
+  font-family: $font-roboto;
+  background: $color-blue;
+}
+%btn-orange {
+  font-family: $font-roboto;
+  background: $color-orange;
+}
+%size-h1 {
+	font-size: 45px;
+	line-height: 45px;
+}
+%size-h2 {
+	font-size: 34px;
+	line-height: 34px;
+}
+%flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
