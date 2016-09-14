@@ -30,45 +30,72 @@ $(document).ready(function(){
 
 	/* Fancybox */
 
-	$('.fancybox').fancybox({
-		helpers: {
-			overlay: {
-				locked: false
-			}
-		}
-	});  
+	// $('.fancybox').fancybox({
+	// 	helpers: {
+	// 		overlay: {
+	// 			locked: false
+	// 		}
+	// 	}
+	// });  
 
-	if ($('.quick-view.lnk-fancybox').length){
-		$('.quick-view.lnk-fancybox').fancybox({
-			wrapCSS: "quick-view_fancy-popup",
-			helpers: {
-				overlay: {
-					locked: false
-				}
-			}
-		});
-	}; 
+	// if ($('.quick-view.lnk-fancybox').length){
+	// 	$('.quick-view.lnk-fancybox').fancybox({
+	// 		wrapCSS: "quick-view_fancy-popup",
+	// 		helpers: {
+	// 			overlay: {
+	// 				locked: false
+	// 			}
+	// 		}
+	// 	});
+	// }; 
 
 
 
-	//---fade label
-    $('.form input[type="text"]').val('');
-    $('.form label').click(function(){
-        $(this).fadeOut(500);
-    });
-    $('.form input[type="text"]').blur( function () {
-        if(!$(this).val()){
-            $(this).siblings('label').fadeIn(300);
-        }
-    });
-    $('.form input[type="text"]').focus( function () {
-        $(this).siblings('label').fadeOut(300);
-    });
+//---fade label
+  $('.fade input[type="text"]').val('');
+  $('.fade label').click(function(){
+      $(this).fadeOut(500);
+  });
+  $('.fade input[type="text"]').blur( function () {
+      if(!$(this).val()){
+          $(this).siblings('label').fadeIn(300);
+      }
+  });
+  $('.fade input[type="text"]').focus( function () {
+      $(this).siblings('label').fadeOut(300);
+  });
     
 
 
-	$('#our-phone').mask('(000) 000-0000');
+	$('#our-phone').mask('+7(000) 000-0000');
+
+	/* more text */
+	// $('.read-more-content').addClass('hide')
+	// $('.read-more-show, .read-more-hide').removeClass('hide')
+	// $('.read-more-show').on('click', function(e) {
+	// 	$(this).next('.read-more-content').removeClass('hide');
+	// 	$(this).addClass('hide');
+	// 	e.preventDefault();
+	// });
+	// $('.read-more-hide').on('click', function(e) {
+	// 	var p = $(this).parent('.read-more-content');
+	// 	p.addClass('hide');
+	// 	p.prev('.read-more-show').removeClass('hide'); 
+	// 	e.preventDefault();
+	// });
 
 
+	$('.read-more-show').click(function () {
+		$(this).toggleClass('show');
+		$('.vacancy__body').toggleClass('show');
+		if($(this).hasClass('show')){
+			$(this).text('Скрыть');
+		}else{
+			$(this).text('Показать');
+		}
+
+		return false;
+	});
+	
 
 });
