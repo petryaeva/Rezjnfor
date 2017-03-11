@@ -33,7 +33,9 @@ body {
   font-size: 14px;
   font-weight: normal;
   color: #454545;
-  line-height: 16px; }
+  line-height: 16px; 
+  min-width: 1200px;
+}
 
 h2,
 .h2 {
